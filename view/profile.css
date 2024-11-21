@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.profile-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+.profile-view, .edit-form {
+    display: block;
+}
+.profile-avatar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile-avatar img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Rounded photo */
+    border: 2px solid #ddd; /* Border for the photo */
+}
+.profile-details p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+.profile-details strong {
+    color: #333;
+}
+.profile-actions, .update-success {
+    text-align: center;
+    margin-top: 20px;
+}
+.profile-actions button, .edit-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.profile-actions button:hover, .edit-form button:hover {
+    background-color: #0056b3;
+}
+.update-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.edit-form input, .edit-form select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.edit-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+#student-fields, #employed-fields {
+    margin-top: 20px;
+}
+
+.cv-container {
+    text-align: center;
+    padding: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.profile-avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #4CAF50;
+}
+
+.cv-details {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.cv-details h3 {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+.cv-details p {
+    color: #555;
+    line-height: 1.6;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}

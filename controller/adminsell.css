@@ -1,0 +1,77 @@
+/* General styles for the admin panel */
+.admin-container {
+    padding: 20px;
+}
+
+/* Arrow and button container */
+
+/* Table styling */
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.book-table th, .book-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Styling for the book photo */
+.book-photo {
+    max-width: 100px; /* Set a maximum width for the photos */
+    height: auto; /* Ensure the height adjusts proportionally */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.book-photo:hover {
+    transform: scale(1.5); /* Enlarge the photo on hover */
+}
+
+/* Additional styling for buttons */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Ensure buttons are block-level elements */
+    text-align: center; /* Center the text inside the button */
+    display: flex;
+    width: 80px;
+    padding: 5px;
+    margin-right: 10px; /* Add some space between the buttons */
+    align-items: center; /* Center the text inside the button */
+    
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Ensure the table does not overflow the container */
+.content {
+    overflow-x: auto;
+}
+
+/* Custom styling for the Actions column */
+.book-table td:last-child {
+    white-space: nowrap;
+    min-width: 200px; /* Increase the width of the Actions column */
+}
+
+/* Adjust button container for vertical layout */
+.book-table td form {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Add space between buttons */
+    align-items: flex-start; /* Align buttons to the left */
+}

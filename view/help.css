@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  
+  .help-container {
+    max-width: 90%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    background-color: #28a745;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  .faq-section,
+  .contact-section,
+  .resources-section {
+    background-color: white;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-section h2,
+  .contact-section h2,
+  .resources-section h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .faq-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .faq-list li {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #28a745;
+  }
+  
+  .contact-section p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .resources-buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .resources-buttons button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .resources-buttons button:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .resources-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .resources-buttons button {
+      width: 100%;
+    }
+  }
+  .faq-question {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #28a745;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .faq-question:hover {
+    color: #1e7e34;
+  }
+  
+  .faq-answer {
+    display: none;
+    font-size: 14px;
+    margin: 5px 0 10px 20px;
+    color: #555;
+  }
+  
+  .faq-answer.visible {
+    display: block;
+  }
+  

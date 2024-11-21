@@ -1,0 +1,489 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-transform: uppercase;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo:hover {
+    color: #1e7e34; /* Darker shade on hover */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    transition: all 0.3s ease-in-out; /* Smooth animation */
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #007bff;
+}
+
+.navbar .nav-links a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 3px;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+    width: 100%;
+}
+
+.navbar .search-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: au;
+}
+
+.navbar .search-user form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar .search-user input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.navbar .search-user .search-icon {
+    font-size: 20px;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar .search-user .search-icon:hover {
+    color: #007bff;
+}
+
+.navbar .search-user .username {
+    font-size: 16px;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.navbar .search-user .logout {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .search-user .logout:hover {
+    background-color: #cc0000;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
+/* section */
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('../image/radu-marcusu-mbKApJz6RSU-unsplash.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7); /* Adjust the brightness of the background image */
+  }
+  
+  /* Overlay to make the text more readable */
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to improve text contrast */
+    z-index: 1; /* Ensure the overlay stays behind the text */
+  }
+  
+  /* Hero content container */
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2; /* Ensure content stays on top of the overlay */
+    padding: 20px;
+  }
+  
+  /* Hero title */
+  .hero-content h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+  }
+  
+  /* Hero subtitle or paragraph */
+  .hero-content p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    font-weight: lighter;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+  }
+  
+  /* Call-to-action buttons */
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .cta-buttons .btn {
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-buttons .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  
+  .cta-buttons .btn-secondary {
+    background-color: #28a745;
+  }
+  
+  .cta-buttons .btn-secondary:hover {
+    background-color: #218838;
+  }
+  /* General Reset and Body Styling */
+  header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+header nav ul li a.active {
+    font-weight: bold;
+}
+
+/* Features Section */
+.features-section {
+    padding: 30px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.features-section .container {
+    max-width: 1200px;  /* Container width */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.features-section h1 {
+    font-size: 2.2rem;  /* Slightly smaller heading */
+    color: #333;
+    margin-bottom: 30px;  /* Reduced margin */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: -40px;
+}
+
+/* Flexbox Layout for Features */
+.features-row {
+    display: flex;
+    justify-content: space-between;  /* Space between items */
+    gap: 20px;
+    flex-wrap: wrap;  /* Allows wrapping if screen is too small */
+}
+
+.feature-box {
+    background-color: #ffffff;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 210px;  /* Set width of each feature box to 210px */
+    flex: 0 1 210px;  /* Prevents the box from growing beyond 210px */
+}
+
+.feature-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-box .icon {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+.feature-box h2 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.stats-section {
+    background-color: #f9f9f9; /* Light background */
+    padding: 40px 10px; /* Reduced padding for smaller section */
+    text-align: center;
+    height: 160px;
+    margin-top: -30px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Reduced gap for consistent spacing */
+    flex-wrap: wrap;
+    height: 160px; /* Allow container height to adjust to content */
+    max-width: 80%; /* Restrict the width of the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100px; /* Reduced max-width for smaller elements */
+    margin: 30px; /* Consistent margin for all items */
+    margin-top: -15px;
+}
+
+.stat-item img {
+    width: 30px; /* Reduced icon size */
+    height: 30px;
+    margin-bottom: 10px; /* Reduced spacing below icon */
+}
+
+.stat-item h2 {
+    font-size: 2rem; /* Slightly smaller font size */
+    margin: 0;
+    color: #333;
+}
+
+.stat-item p {
+    margin: 5px 0 0; /* Reduced spacing below the text */
+    font-size: 1rem; /* Slightly smaller font size for descriptions */
+    color: #666;
+}
+
+
+
+/* General Footer Styles */
+footer {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Flexbox for Footer Content */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .footer-section {
+    max-width: 220px;
+  }
+  
+  .footer-section h3 {
+    color: #28a745;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #6c757d;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  /* Social Media Icons */
+  .social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 20px;
+    color: #6c757d;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff;
+  }
+  
+  .social-icons i {
+    font-size: 20px;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: -30px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-section {
+      max-width: 100%;
+      margin-top :-30px;
+    }
+  
+    .social-icons a {
+      margin-right: 10px;
+    }
+  }
+  
+  .profile-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+
+.profile-icon:hover {
+    color: #28a745;
+}
+
+
+.cart-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Proper spacing between items */
+  font-family: Arial, sans-serif;
+}
+
+/* Cart Icon Styling */
+.cart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white; /* White background */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.cart-icon:hover {
+  background-color: #f5f5f5; /* Light gray on hover */
+  border-color: #999; /* Darker border */
+}
+
+.cart-icon i {
+  font-size: 20px; /* Adjust size of the cart icon */
+  color: black; /* Black cart icon color */
+}
