@@ -115,7 +115,7 @@ if (isset($_SESSION['update_success'])) {
     <div class="cv-container">
         <!-- Profile Picture -->
         <div class="profile-avatar">
-            <img src="<?php echo !empty($user['avatar']) ? './uploads/' . htmlspecialchars($user['avatar']) : './uploads/default-avatar.png'; ?>" alt="User Avatar" style="width:150px; height:150px; border-radius:50%; margin-bottom:20px;">
+            <img src="<?php echo !empty($user['avatar']) ? '../uploads/' . htmlspecialchars($user['avatar']) : '../uploads/default-avatar.png'; ?>" alt="User Avatar" style="width:150px; height:150px; border-radius:50%; margin-bottom:20px;">
         </div>
 
         <!-- Personal Details in CV Format -->

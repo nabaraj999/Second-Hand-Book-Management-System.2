@@ -39,9 +39,11 @@ $result = mysqli_query($conn, $sql);
         <div class="logo">BookNest</div>
         <div class="nav-links">
             <!-- Updated Nav Links -->
+            <a href="index.php">Home</a>
             <a href="adminsell.php">Sell</a>
             <a href="bookmanage.php">Buy</a>
-            <a href="manage_users.php">User Management</a>
+            <a href="manage_users.php">User Manage</a>
+            <a href="Addbook.php">Book Add</a>
             <a href="manage_books.php">Edit Book</a>
             <a href="help.php">Help</a>
         </div>

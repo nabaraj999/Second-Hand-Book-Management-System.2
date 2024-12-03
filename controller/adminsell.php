@@ -23,16 +23,17 @@ $username = $_SESSION['username'];
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="../view/index.css">
-  <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <div class="navbar">
         <div class="logo">BookNest</div>
         <div class="nav-links">
             <!-- Updated Nav Links -->
+            <a href="index.php">Home</a>
             <a href="adminsell.php">Sell</a>
             <a href="bookmanage.php">Buy</a>
-            <a href="manage_users.php">User Management</a>
+            <a href="manage_users.php">User Manage</a>
+            <a href="Addbook.php">Book Add</a>
             <a href="manage_books.php">Edit Book</a>
             <a href="help.php">Help</a>
         </div>

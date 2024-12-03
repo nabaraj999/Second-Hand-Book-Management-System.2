@@ -3,10 +3,10 @@
 $servername = "localhost";
 $username = "root"; // Change to your database username
 $password = ""; // Change to your database password
-$dbname = "cs"; // Change to your database name
+$dbname = "booknest"; // Change to your database name
 
 // Create a connection to the database
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname, 3307);
 
 // Check connection
 if ($conn->connect_error) {

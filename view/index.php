@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="navbar">
@@ -104,93 +105,184 @@
     </section>
 
 
-    <section class="stats-section">
-    <div class="stats-container">
-      <!-- Members -->
-      <div class="stat-item">
-        <img src="https://img.icons8.com/color/50/conference-call.png" alt="Members Icon">
-        <h2 class="counter" data-target="500">0</h2>
-        <p>Joined Members</p>
-      </div>
-      <!-- Books -->
-      <div class="stat-item">
-        <img src="https://img.icons8.com/color/50/books.png" alt="Books Icon">
-        <h2 class="counter" data-target="1500">0</h2>
-        <p>Books</p>
-      </div>
-      <!-- Happy Clients -->
-      <div class="stat-item">
-        <img src="https://img.icons8.com/color/50/happy.png" alt="Happy Icon">
-        <h2 class="counter" data-target="300">0</h2>
-        <p>Happy Clients</p>
-      </div>
-      <!-- Best Deals -->
-      <div class="stat-item">
-        <img src="https://img.icons8.com/color/50/idea.png" alt="Best Deals Icon">
-        <h2 class="counter" data-target="50">0</h2>
-        <p>Best Deals Weekly</p>
-      </div>
-      <!-- Add Additional Stat (Optional) -->
-      <div class="stat-item">
-        <img src="https://img.icons8.com/color/50/customer-support.png" alt="Support Icon">
-        <h2 class="counter" data-target="1453">0</h2>
-        <p>Hours of Support</p>
-      </div>
-    </div>
-  </section>
+    <link rel="stylesheet" href="index.css">
+    <section class="book-marquee-section">
+        <h2 class="book-marquee-title">Explore Our Book Collection</h2>
+        <div class="book-marquee-wrapper">
+            <div class="book-marquee-container">
+                <div class="book-marquee-animation">
+                    <!-- First Set of Books -->
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="background-image: url(../image/book1.jpg);"></div>
+                            <div class="book-side">Fiction</div>
+                        </div>
+                        <div class="book-overlay">
+                            <h3>Fiction</h3>
+                            <p>Explore imaginative worlds and compelling narratives.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="background-image: url(../image/book2.jpg);"></div>
+                            <div class="book-side">Non-Fiction</div>
+                        </div>
+                        <div class="book-overlay">
+                            <h3>Non-Fiction</h3>
+                            <p>Discover real stories and informative insights.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="background-image: url(../image/book3.jpg);"></div>
+                            <div class="book-side">Science</div>
+                        </div>
+                        <div class="book-overlay">
+                            <h3>Science</h3>
+                            <p>Unravel the mysteries of the universe.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="background-image: url(../image/book4.jpg);"></div>
+                            <div class="book-side">History</div>
+                        </div>
+                        <div class="book-overlay">
+                            <h3>History</h3>
+                            <p>Journey through time and past civilizations.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="background-image: url(../image/book5.jpg);"></div>
+                            <div class="book-side">Biography</div>
+                        </div>
+                        <div class="book-overlay">
+                            <h3>Biography</h3>
+                            <p>Explore inspiring life stories.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="background-image: url(../image/book6.jpg);"></div>
+                            <div class="book-side">Technology</div>
+                        </div>
+                        <div class="book-overlay">
+                            <h3>Technology</h3>
+                            <p>Stay ahead with cutting-edge innovations.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="background-image: url(../image/book7.jpg);"></div>
+                            <div class="book-side">Mystery</div>
+                        </div>
+                        <div class="book-overlay">
+                            <h3>Mystery</h3>
+                            <p>Uncover thrilling puzzles and suspenseful tales.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="background-image: url(../image/book8.jpg);"></div>
+                            <div class="book-side">Fantasy</div>
+                        </div>
+                        <div class="book-overlay">
+                            <h3>Fantasy</h3>
+                            <p>Immerse yourself in magical and extraordinary realms.</p>
+                        </div>
+                    </div>
 
-  <footer>
-  <div class="footer-container">
-    <!-- Social Media Links -->
-    <div class="footer-section">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-      </div>
-    </div>
+                    <!-- Duplicate First Set of Books -->
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="background-image: url(../image/book9.jpg);"></div>
+                            <div class="book-side">Fiction</div>
+                        </div>
+                        <div class="book-overlay">
+                            <h3>Fiction</h3>
+                            <p>Explore imaginative worlds and compelling narratives.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="background-image: url(../image/book10.jpg);"></div>
+                            <div class="book-side">Non-Fiction</div>
+                        </div>
+                        <div class="book-overlay">
+                            <h3>Non-Fiction</h3>
+                            <p>Discover real stories and informative insights.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-inner">
+                            <div class="book-front" style="background-image: url(../image/book11.jpg);"></div>
+                            <div class="book-side">Science</div>
+                        </div>
+                        <div class="book-overlay">
+                            <h3>Science</h3>
+                            <p>Unravel the mysteries of the universe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <!-- Social Media Links -->
+            <div class="footer-section">
+                <h3>Connect with Us</h3>
+                <div class="social-icons">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+                <p class="mt-3">Stay connected and get the latest updates!</p>
+            </div>
 
-    <!-- Contact Details -->
-    <div class="footer-section">
-      <h3>Contact</h3>
-      <p>chapagaun-10, Lalitpur</p>
-      <p>01-5900401</p>
-      <p>+9779845889271</p>
-      <p><a href="mailto:hiredriver@example.com">booknestjbc@example.com</a></p>
-    </div>
+            <!-- Contact Details -->
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt mr-2"></i> Chapagaun-10, Lalitpur, Nepal</p>
+                <p><i class="fas fa-phone mr-2"></i> +977 01-5900401</p>
+                <p><i class="fas fa-mobile-alt mr-2"></i> +977 9845889271</p>
+                <p><i class="fas fa-envelope mr-2"></i> <a href="mailto:booknestjbc@example.com">booknestjbc@example.com</a></p>
+            </div>
 
-    <!-- Navigation Links -->
-    <div class="footer-section">
-      <h3>Links</h3>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Sell</a></li>
-        <li><a href="#">Buy</a></li>
-        <li><a href="#">Order</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
-    </div>
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About BookNest</a></li>
+                    <li><a href="#">Sell Books</a></li>
+                    <li><a href="#">Buy Books</a></li>
+                    <li><a href="#">Book Orders</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
 
-    <!-- Articles Section -->
-    <div class="footer-section">
-      <h3>Articles</h3>
-      <ul>
-        <li><a href="#">Online Books Nepal</a></li>
-        <li><a href="#">Booknest.com</a></li>
-        <li><a href="#">onlinebooksnep.com</a></li>
-      </ul>
-    </div>
-  </div>
+            <!-- Resources -->
+            <div class="footer-section">
+                <h3>Book Resources</h3>
+                <ul>
+                    <li><a href="#">Online Books Nepal</a></li>
+                    <li><a href="#">Book Recommendations</a></li>
+                    <li><a href="#">Reading Community</a></li>
+                    <li><a href="#">Book Reviews</a></li>
+                    <li><a href="#">Bestseller Lists</a></li>
+                </ul>
+            </div>
+        </div>
 
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    <p>© 2024 - BOOKNEST | Powered by BOOKNEST</p>
-  </div>
-</footer>
-
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>© 2024 BOOKNEST - Your Ultimate Book Destination | Powered by BOOKNEST Technologies</p>
+        </div>
+    </footer>
 
     <script>
         function logout() {
@@ -220,7 +312,19 @@
       animate();
     });
 
-   
+    const marqueeWrapper = document.querySelector('.book-marquee-wrapper');
+        const marqueeContainer = document.querySelector('.book-marquee-container');
+        const marqueeAnimation = document.querySelector('.book-marquee-animation');
+        
+        // Pause animation on hover
+        marqueeWrapper.addEventListener('mouseenter', () => {
+            marqueeAnimation.style.animationPlayState = 'paused';
+        });
+        
+        marqueeWrapper.addEventListener('mouseleave', () => {
+            marqueeAnimation.style.animationPlayState = 'running';
+        });
+        
     </script>
 </body>
 </html>

@@ -92,13 +92,13 @@ body {
 }
 
 .book-card .buy-button {
-    margin-top: 10px;
     padding: 10px 20px;
     background-color: #2ecc71;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .book-card .buy-button:hover {

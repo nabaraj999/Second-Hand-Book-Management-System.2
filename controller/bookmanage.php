@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Fetch payment details
-$sql = "SELECT * FROM buybooks_payment";
+$sql = "SELECT * FROM transactions";
 $result = $conn->query($sql);
 ?>
 
@@ -87,6 +87,7 @@ $result = $conn->query($sql);
         <div class="logo">BookNest</div>
         <div class="nav-links">
             <!-- Updated Nav Links -->
+            <a href="index.php">Home</a>
             <a href="adminsell.php">Sell</a>
             <a href="bookmanage.php">Buy</a>
             <a href="manage_users.php">User Management</a>
@@ -108,7 +109,7 @@ $result = $conn->query($sql);
         </div>
     </div>
 
-    <h1>Payment Details</h1>
+    <h1 class="pd">Payment Details</h1>
     <link rel="stylesheet" href="bookmanage.css">
     
     <?php if (!empty($message)): ?>

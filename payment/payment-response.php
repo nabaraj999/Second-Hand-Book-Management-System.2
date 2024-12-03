@@ -1,6 +1,5 @@
 <?php
 session_start();
-// Get the pidx from the URL
 $pidx = $_GET['pidx'] ?? null;
 
 if ($pidx) {
@@ -20,78 +19,60 @@ if ($pidx) {
             'Content-Type: application/json',
         ),
     ));
- 
 
     $response = curl_exec($curl);
     curl_close($curl);
 
     if ($response) {
         $responseArray = json_decode($response, true);
-        
-<?php
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "khalti_payment";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+        // Debug Khalti API Response
+        file_put_contents('debug.log', "Khalti Response: " . print_r($responseArray, true) . PHP_EOL, FILE_APPEND);
 
-// Save transaction data
-$stmt = $conn->prepare("INSERT INTO transactions (pidx, status, amount, purchase_order_id, customer_name, customer_email, customer_phone) VALUES (?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssissss", $pidx, $responseArray['status'], $responseArray['amount'], $responseArray['purchase_order_id'], $responseArray['customer_info']['name'], $responseArray['customer_info']['email'], $responseArray['customer_info']['phone']);
-$stmt->execute();
-$stmt->close();
+        if (isset($responseArray['status'], $responseArray['amount'], $responseArray['purchase_order_id'], $responseArray['customer_info']['name'], $responseArray['customer_info']['email'], $responseArray['customer_info']['phone'])) {
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "booknest";
 
-$conn->close();
-?>
+            $conn = new mysqli($servername, $username, $password, $dbname, 3307);
 
-switch ($responseArray['status']) {
-            case 'Completed':
-                //here you can write your logic to update the database
-                $_SESSION['transaction_msg'] = '<script>
-                        Swal.fire({
-                            icon: "success",
-                            title: "Transaction successful.",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                    </script>';
+            if ($conn->connect_error) {
+                die("Database Connection Failed: " . $conn->connect_error);
+            }
 
+            // Prepare Insert Query
+            $stmt = $conn->prepare("INSERT INTO transactions (pidx, status, amount, purchase_order_id, customer_name, customer_email, customer_phone) 
+                VALUES (?, ?, ?, ?, ?, ?, ?) 
+                ON DUPLICATE KEY UPDATE status = VALUES(status), amount = VALUES(amount)");
+            $stmt->bind_param(
+                "ssissss",
+                $pidx,
+                $responseArray['status'],
+                $responseArray['amount'],
+                $responseArray['purchase_order_id'],
+                $responseArray['customer_info']['name'],
+                $responseArray['customer_info']['email'],
+                $responseArray['customer_info']['phone']
+            );
 
-                header("Location: message.php");
-                exit();
-                break;
-            case 'Expired':
-            case 'User canceled':
-                //here you can write your logic to update the database
-                $_SESSION['transaction_msg'] = '<script>
-                        Swal.fire({
-                            icon: "error",
-                            title: "Transaction failed.",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                    </script>';
-                header("Location: checkout.php");
-                exit();
-                break;
-            default:
-            //here you can write your logic to update the database
-                $_SESSION['transaction_msg'] = '<script>
-                        Swal.fire({
-                            icon: "error",
-                            title: "Transaction failed.",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                    </script>';
-                header("Location: checkout.php");
-                exit();
-                break;
+            if ($stmt->execute()) {
+                echo "Transaction saved successfully!";
+            } else {
+                // Debug SQL Error
+                file_put_contents('debug.log', "SQL Error: " . $stmt->error . PHP_EOL, FILE_APPEND);
+                echo "Error saving transaction: " . $stmt->error;
+            }
+
+            $stmt->close();
+            $conn->close();
+        } else {
+            die("Invalid response from Khalti API. Missing required fields.");
         }
+    } else {
+        die("Failed to connect to Khalti API.");
     }
+} else {
+    die("Invalid request. Pidx is missing.");
 }
+?>

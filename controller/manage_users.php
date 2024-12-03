@@ -134,9 +134,11 @@ $result = mysqli_query($conn, "SELECT * FROM users");
         <div class="logo">BookNest</div>
         <div class="nav-links">
             <!-- Updated Nav Links -->
+            <a href="index.php">Home</a>
             <a href="adminsell.php">Sell</a>
             <a href="bookmanage.php">Buy</a>
-            <a href="manage_users.php">User Management</a>
+            <a href="manage_users.php">User Manage</a>
+            <a href="Addbook.php">Book Add</a>
             <a href="manage_books.php">Edit Book</a>
             <a href="help.php">Help</a>
         </div>
@@ -195,9 +197,11 @@ $result = mysqli_query($conn, "SELECT * FROM users");
                     <td><?php echo $row['email']; ?></td>
                     <td><?php echo $row['role']; ?></td>
                     <td class="action-links">
-                        <a href="edit_user.php?id=<?php echo $row['id']; ?>">Edit</a>
-                        <a href="delete_user.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
-                    </td>
+    <a href="edit_user.php?id=<?php echo $row['id']; ?>">Edit</a>
+    <a href="delete_user.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
+    <a href="view_user.php?id=<?php echo $row['id']; ?>">View</a> <!-- New View Link -->
+</td>
+
                 </tr>
             <?php endwhile; ?>
         </table>
