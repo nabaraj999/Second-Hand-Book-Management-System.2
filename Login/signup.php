@@ -240,10 +240,10 @@ $conn->close();
         function validateUsername() {
             const username = document.getElementById("username").value;
             const usernameMessage = document.getElementById("usernameMessage");
-            const isValidUsername = /^[a-zA-Z0-9]{3,20}$/.test(username);
+            const isValidUsername = /^[a-zA-Z0-9]{8,20}$/.test(username);
 
             if (!isValidUsername) {
-                usernameMessage.textContent = "Username must be 3-20 alphanumeric characters.";
+                usernameMessage.textContent = "Username must be 8-20 alphanumeric characters.";
                 return false;
             } else {
                 usernameMessage.textContent = "";

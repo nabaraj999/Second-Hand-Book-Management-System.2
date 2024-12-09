@@ -140,7 +140,8 @@ $result = mysqli_query($conn, "SELECT * FROM users");
             <a href="manage_users.php">User Manage</a>
             <a href="Addbook.php">Book Add</a>
             <a href="manage_books.php">Edit Book</a>
-            <a href="help.php">Help</a>
+            <a href="finance.php">Finnance</a>
+            <a href="help.php">Feedback</a>
         </div>
         <div class="search-user">
             <span class="username">

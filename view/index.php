@@ -228,6 +228,7 @@
             </div>
         </div>
     </section>
+    
     <footer>
         <div class="footer-container">
             <!-- Social Media Links -->
@@ -257,7 +258,7 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About BookNest</a></li>
+     
                     <li><a href="#">Sell Books</a></li>
                     <li><a href="#">Buy Books</a></li>
                     <li><a href="#">Book Orders</a></li>

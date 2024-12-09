@@ -141,61 +141,6 @@ $username = $_SESSION['username'];
 
     <!-- Contact Details -->
 
-    <footer>
-        <div class="footer-container">
-            <!-- Social Media Links -->
-            <div class="footer-section">
-                <h3>Connect with Us</h3>
-                <div class="social-icons">
-                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                </div>
-                <p class="mt-3">Stay connected and get the latest updates!</p>
-            </div>
-
-            <!-- Contact Details -->
-            <div class="footer-section">
-                <h3>Contact Information</h3>
-                <p><i class="fas fa-map-marker-alt mr-2"></i> Chapagaun-10, Lalitpur, Nepal</p>
-                <p><i class="fas fa-phone mr-2"></i> +977 01-5900401</p>
-                <p><i class="fas fa-mobile-alt mr-2"></i> +977 9845889271</p>
-                <p><i class="fas fa-envelope mr-2"></i> <a href="mailto:booknestjbc@example.com">booknestjbc@example.com</a></p>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About BookNest</a></li>
-                    <li><a href="#">Sell Books</a></li>
-                    <li><a href="#">Buy Books</a></li>
-                    <li><a href="#">Book Orders</a></li>
-                    <li><a href="#">Help Center</a></li>
-                </ul>
-            </div>
-
-            <!-- Resources -->
-            <div class="footer-section">
-                <h3>Book Resources</h3>
-                <ul>
-                    <li><a href="#">Online Books Nepal</a></li>
-                    <li><a href="#">Book Recommendations</a></li>
-                    <li><a href="#">Reading Community</a></li>
-                    <li><a href="#">Book Reviews</a></li>
-                    <li><a href="#">Bestseller Lists</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <p>© 2024 BOOKNEST - Your Ultimate Book Destination | Powered by BOOKNEST Technologies</p>
-        </div>
-    </footer>
 
 
 

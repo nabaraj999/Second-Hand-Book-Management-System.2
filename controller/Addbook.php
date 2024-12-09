@@ -33,6 +33,7 @@ $username = $_SESSION['username'];
             <a href="manage_users.php">User Manage</a>
             <a href="Addbook.php">Book Add</a>
             <a href="manage_books.php">Edit Book</a>
+            <a href="finance.php">Finance</a>
             <a href="help.php">Help</a>
         </div>
         <div class="search-user">

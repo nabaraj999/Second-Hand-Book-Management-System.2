@@ -159,7 +159,7 @@ if (isset($_GET['error']) && $_GET['error'] != null) {
     <div class="login-container">
         <div class="logo">BOOKNEST
         </div>
-        <h2>User Login</h2>
+        <h2>Login</h2>
 
         <?php if (isset($error_message) && $error_message != '') { ?>
             <div class="error"><?php echo $error_message; ?></div>

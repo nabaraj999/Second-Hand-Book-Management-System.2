@@ -97,11 +97,13 @@ curl_setopt_array($curl, array(
 ));
 
 $response = curl_exec($curl);
+echo $response;
 
 
-if (curl_errno($curl)) {
+    if (curl_errno($curl)) {
     echo 'Error:' . curl_error($curl);
-} else {
+} 
+else {
     $responseArray = json_decode($response, true);
 
     if (isset($responseArray['error'])) {

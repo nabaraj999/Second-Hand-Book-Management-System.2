@@ -76,7 +76,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <a href="bookmanage.php">Buy</a>
             <a href="manage_users.php">User Management</a>
             <a href="manage_books.php">Edit Book</a>
-            <a href="help.php">Help</a>
+            <a href="finance.php">Finnance</a>
+            <a href="help.php">Feedback</a>
         </div>
         <div class="search-user">
             <!-- User Info Section -->

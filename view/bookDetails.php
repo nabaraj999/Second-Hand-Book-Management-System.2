@@ -65,16 +65,15 @@ if (isset($_GET['book_id'])) {
             <button class="logout" onclick="logout()">Logout</button>
         </div>
     </div>
-
-    <!-- Book Details Section -->
     <div class="book-details">
         <?php 
         $photoPath = '../uploads/' . $book['photo'];
         if (!empty($book['photo']) && file_exists($photoPath)): ?>
-            <img id="bookPhoto" src="<?php echo htmlspecialchars($photoPath); ?>" alt="Book Image">
+            <img id="bookPhoto" src="<?php echo htmlspecialchars($photoPath); ?>" alt="Book Image" onclick="openModal()">
         <?php else: ?>
-            <img id="bookPhoto" src="default-book.jpg" alt="Default Book Image">
+            <img id="bookPhoto" src="default-book.jpg" alt="Default Book Image" onclick="openModal()">
         <?php endif; ?>
+
         <div class="details">
             <h1><?php echo htmlspecialchars($book['book_name']); ?></h1>
             <p>Author: <?php echo htmlspecialchars($book['author']); ?></p>
@@ -93,7 +92,29 @@ if (isset($_GET['book_id'])) {
         <input type="hidden" id="bookPrice" value="<?php echo htmlspecialchars($book['price']); ?>">
     </div>
 
+    <!-- Modal for full book image -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+
     <script>
+
+function openModal() {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImage");
+            var bookPhoto = document.getElementById("bookPhoto");
+
+            // Set the image source to the clicked image source
+            modal.style.display = "block";
+            modalImg.src = bookPhoto.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        } 
         function addToCart() {
             var bookId = document.getElementById("bookId").value;
             var bookName = document.getElementById("bookName").value;
